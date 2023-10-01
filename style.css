@@ -13,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+    
 body{
     background-color: var(--background);
     height: 100vh;
@@ -35,29 +35,29 @@ body{
 
 }
 
-.container-nav ul{
+ .ul-desktop{
     display: flex;
     list-style: none;
     align-items: center;
 }
 .container-nav ul li{
     margin: 0px 50px;
+    width: 80px;
 }
 .container-nav ul li a{
     text-decoration: none;
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 .container-nav ul li a:hover{
     font-weight: 700;
+    border-bottom: 2px solid #ffffff;
+   padding-bottom: 8px;
+    
 }
 
-/* TODO --> Arreglar letras */
-
-/* .container-nav ul a:hover > li{
-    border-bottom: 3px solid #ffffff;
-} */
 
 
 main{
@@ -69,8 +69,9 @@ main{
 }
 .container-text-main{
     max-width: 400px;
+    margin-right: 50px;
 }
-.container-text-main .title-info{
+.title-info{
     font-family: 'Lora', serif;
     color: var(--text-color);
     font-weight: 500;
@@ -84,6 +85,7 @@ main{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     display: flex;
+    
 }
 
 .read-more-text svg{
@@ -108,7 +110,7 @@ main{
 .image-interior{
     width: 700px;
     height: 500px;
-    margin-right: 50px;
+    margin-right: 70px;
 }
 
 .container-designer{
@@ -137,15 +139,15 @@ main{
     margin-right: 15px;
 }
 
-.name-designer, .specialization-designer{
-    color: var(--text-color);
-}
+
 .name-designer{
+    color: var(--text-color);
     font-size: 14px;
 }
 
 .specialization-designer{
     font-size: 12px;
+    color: #828282;
 }
 
 .designed-in{
@@ -156,4 +158,67 @@ main{
     max-width: 250px;
     margin: 10px 0px;
     
+}
+
+.icon-tabler{
+    display: none;
+}
+
+
+@media screen and (max-width:1200px) {
+    body{
+        padding: 20px;
+      
+    }
+    main{
+       
+        flex-direction: column;
+        align-items: normal;
+        justify-content: start;
+       
+    }
+
+    .ul-desktop{
+        
+        display: none;
+    }
+
+    .icon-tabler{
+        display: block;
+    }
+    
+    .image-interior{
+        width: 100%;
+       height: auto;
+       margin: 0;
+    }
+    .title-info{
+        font-size: 36px;
+        width: 100%;
+    }
+    .container-text-main{
+        margin: 40px 0px;
+     
+       
+      
+        
+    }
+    .description-text{
+        font-size: 14px;
+        max-width: 250px;
+       
+    }
+
+    .container-designer{
+        width: 300px;
+        right: 30px;
+        bottom: -90px;
+    }
+    .designed-in{
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    .specialization-designer{
+        font-size: 10px;
+    }
 }
