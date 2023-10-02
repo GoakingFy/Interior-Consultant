@@ -18,11 +18,18 @@ body{
     background-color: var(--background);
     height: 100vh;
     padding: 48px;
+   
+    
 }
-
+ input , label{
+    display: none ;
+ }
 .container-nav{
+   
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+   justify-content: space-between;
+    
 }
 
 .icon-page{
@@ -37,21 +44,23 @@ body{
 
  .ul-desktop{
     display: flex;
+   
     list-style: none;
     align-items: center;
 }
-.container-nav ul li{
+ .ul-desktop li{
     margin: 0px 50px;
     width: 80px;
 }
-.container-nav ul li a{
+ .ul-desktop li a{
     text-decoration: none;
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
+    transition: .1s ease-in-out;
     
 }
 
-.container-nav ul li a:hover{
+  .ul-desktop li a:hover{
     font-weight: 700;
     border-bottom: 2px solid #ffffff;
    padding-bottom: 8px;
@@ -114,6 +123,7 @@ main{
 }
 
 .container-designer{
+    max-width: 100%;
     width: 380px;
     background-color: var(--background);
     box-shadow: 0px 2px 2px 2px #0000003e;
@@ -164,8 +174,72 @@ main{
     display: none;
 }
 
+input[type="radio"]{
+    display: none;
+    width: 30px;
+  
+}
+label svg {
+  color: #ffffff;
+  width: 38px;
+   
+ }
+
+input:checked + .ul-mobile {
+    display: flex;
+
+    background-color: var(--background);
+}
+
+.ul-mobile{
+    z-index: 1;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+.ul-mobile li{
+    list-style: none;
+    margin: 25px 0px;
+}
+
+.ul-mobile li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    transition: .1s ease-in-out;
+}
+
+.ul-mobile li a:hover{
+    font-weight: 700;
+    border-bottom: 2px solid #ffffff;
+   padding-bottom: 8px;
+    
+}
+
+.ul-mobile label svg{
+    top: 0;
+    right: 0;
+    margin: 20px;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+}
 
 @media screen and (max-width:1200px) {
+    label{
+        display: block;
+    }
     body{
         padding: 20px;
       
@@ -186,9 +260,11 @@ main{
     .icon-tabler{
         display: block;
     }
-    
+    .container-images{
+        width: fit-content;
+    }
     .image-interior{
-        width: 100%;
+       max-width: 100%;
        height: auto;
        margin: 0;
     }
@@ -210,8 +286,9 @@ main{
     }
 
     .container-designer{
-        width: 300px;
+        max-width: 100%;
         right: 30px;
+        margin: auto;
         bottom: -90px;
     }
     .designed-in{
@@ -221,4 +298,13 @@ main{
     .specialization-designer{
         font-size: 10px;
     }
+}
+
+@media screen and (max-width:480px) {
+        .container-designer{
+            width: 250px;
+            min-width: 250px;
+            right: 15px;
+            bottom: -110px;
+        }
 }

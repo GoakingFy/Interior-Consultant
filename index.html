@@ -31,20 +31,38 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M4 6l16 0"></path>
-          <path d="M4 12l16 0"></path>
-          <path d="M4 18l16 0"></path>
-       </svg>
+     
+        <input type="radio" name="inpt" id="hamburger">
 
-       <!-- <ul class="ul-mobile">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Collection</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul> -->
+        <ul class="ul-mobile">
+          <input type="radio" name="inpt" id="close">
+          <label for="close">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M18 6l-12 12"></path>
+              <path d="M6 6l12 12"></path>
+           </svg>
+          </label>
+         
+         
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <label for="hamburger">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6l16 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M4 18l16 0"></path>
+         </svg>
+        </label>
+        
+        
+
+       
 
       </nav>
 
@@ -61,10 +79,10 @@
          </svg></a>
         </div>
         <div class="container-images">
-          <img class="image-interior" src="photo1.png" alt="image interior">
+          <img class="image-interior" src="./src/img/photo1.png" alt="image interior">
           <div class="container-designer">
             <div class="container-infoDesigner">
-              <img src="photo2.png" alt="photo designer" class="image-designer">
+              <img src="./src/img/photo2.png" alt="photo designer" class="image-designer">
               <span>
                 <h3 class="name-designer">Aliza Webber</h3>
                 <p class="specialization-designer">Interior Designer</p>
